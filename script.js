@@ -106,3 +106,20 @@ editButtonSecondCard.addEventListener('click', function() {
     });
 }
 
+
+//fonctionnalité 7
+
+  // Récupération de l'élément du bouton "==> " avec le sélecteur fourni
+  const moveButton = document.querySelector("a.btn.btn-secondary.my-2");
+
+  // Récupération du parent des cards avec le sélecteur spécifique
+  const cardsContainer = document.querySelector(".album .row");
+
+  // Ajout d'un écouteur d'événement click sur le bouton "==> "
+  moveButton.addEventListener('click', function() {
+      // Récupération de la dernière card
+      const lastCard = cardsContainer.lastElementChild;
+
+      // Déplacement de la dernière card en premier
+      cardsContainer.insertBefore(lastCard, cardsContainer.firstElementChild);
+  });
